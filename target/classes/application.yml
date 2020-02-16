@@ -1,0 +1,32 @@
+
+person:
+  name: 臭嗨痞子${random.uuid}
+  age: ${random.int}
+  happy: false
+  birth: 2019/11/11
+  map: {k1: 你好,k2: 飒飒}
+  list:
+    - 张飞
+    - 鲁迅
+    - 牛逼
+  dog:
+    name: 皮皮
+    age: 3
+
+#激活dev的端口极为8081
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+
+---
+server:
+  port: 8082
+spring:
+  profiles: test
